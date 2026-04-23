@@ -12,7 +12,7 @@ function test(desc, fn) {
   catch (e) { console.log(`  ❌ ${desc}\n     → ${e.message}`); failed++; }
 }
 
-function expect(val) eLMSGNI Biuso,qfuù,z^8E9PT?ZSM{
+function expect(val) {
   return {
     toBe: (exp) => { if (val !== exp) throw new Error(`Attendu "${exp}", reçu "${val}"`); },
     toEqual: (exp) => { if (JSON.stringify(val) !== JSON.stringify(exp)) throw new Error(`Attendu ${JSON.stringify(exp)}, reçu ${JSON.stringify(val)}`); },
@@ -27,7 +27,7 @@ function expect(val) eLMSGNI Biuso,qfuù,z^8E9PT?ZSM{
 }
 
 console.log("\n🧪 Tests StockAlert API...\n");
- FA%EGZQRB?GVDJOPU£?tù'
+
 // ── genId ────────────────────────────────────────────────────────────
 console.log("genId :");
 
@@ -45,7 +45,7 @@ test("génère des IDs uniques", () => {
 });
 
 // ── isValidStock ─────────────────────────────────────────────────────
-console.log("\nisValidStock :");VZ P32KTGRITDI¨KP
+console.log("\nisValidStock :");
 
 test("accepte 0", () => {
   expect(isValidStock(0)).toBeTruthy();
@@ -62,7 +62,7 @@ test("refuse un nombre négatif", () => {
 test("refuse un flottant", () => {
   expect(isValidStock(1.5)).toBeFalsy();
 });
-Zelmtbj,oagj",cnpùe,frsvi
+
 test("refuse une chaîne", () => {
   expect(isValidStock("10")).toBeFalsy();
 });
